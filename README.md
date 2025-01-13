@@ -24,3 +24,8 @@
 <h2> Database setelah tambah Data</h2>
 
 ![image](https://github.com/user-attachments/assets/180e8f7d-f10f-4abc-96fc-037e47346255)
+
+<h2> tampilan UCP</h2>
+
+![image](https://github.com/user-attachments/assets/f934bbb0-7367-4257-b8e5-79d140c19b73)
+
