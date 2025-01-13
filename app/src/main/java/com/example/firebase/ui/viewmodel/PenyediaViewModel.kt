@@ -9,6 +9,9 @@ import com.example.firebase.MahasiswaApp
 object PenyediaViewModel {
     val Factory = viewModelFactory {
         initializer { HomeViewModel(mahasiswaApp().containerApp.repositoryMhs) }
+        initializer { InsertViewModel(
+            mahasiswaApp().containerApp.repositoryMhs
+        ) }
     }
 }
 
