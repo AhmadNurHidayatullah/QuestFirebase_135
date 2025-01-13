@@ -50,6 +50,13 @@ class InsertViewModel(
             uiState = FormState.Error("Data tidak valid")
         }
     }
+    fun resetForm(){
+        uiEvent = insertUiState()
+        uiState = FormState.Idle
+    }
+    fun resetSnackBarMessage(){
+        uiState = FormState.Idle
+    }
 }
 
 
