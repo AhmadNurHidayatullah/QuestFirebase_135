@@ -29,7 +29,7 @@ class InsertViewModel(
         val errorState = FormErrorState(
             nim = if (event.nim.isNotEmpty()) null else "NIM tidak boleh kosong",
             nama = if (event.nama.isNotEmpty()) null else "Nama tidak boleh kosong",
-            jenisKelamin = if (event.jenisKelamin.isNotEmpty()) null else "Jenis Kelamin tidak boleh kosong",
+            gender = if (event.gender.isNotEmpty()) null else "Jenis Kelamin tidak boleh kosong",
             alamat = if (event.alamat.isNotEmpty()) null else "Alamat tidak boleh kosong",
             kelas = if (event.kelas.isNotEmpty()) null else "Kelas tidak boleh kosong",
             angkatan = if (event.angkatan.isNotEmpty()) null else "Angkatan tidak boleh kosong"
@@ -53,7 +53,7 @@ class InsertViewModel(
         }
     }
     fun resetForm(){
-        uiEvent = insertUiState()
+        uiEvent = InsertUiState()
         uiState = FormState.Idle
     }
     fun resetSnackBarMessage(){
@@ -78,13 +78,13 @@ data class InsertUiState (
 data class FormErrorState(
     val nim: String? = null,
     val nama: String? = null,
-    val jenisKelamin: String? = null,
+    val gender: String? = null,
     val alamat: String? = null,
     val kelas: String? = null,
     val angkatan: String? = null
 ) {
     fun isValid(): Boolean {
-        return nim == null && nama == null && jenisKelamin == null &&
+        return nim == null && nama == null && gender == null &&
                 alamat == null && kelas == null && angkatan == null
     }
 }
@@ -92,7 +92,7 @@ data class FormErrorState(
 data class MahasiswaEvent(
     val nim: String = "",
     val nama: String = "",
-    val jenisKelamin: String= "",
+    val gender: String= "",
     val alamat: String = "",
     val kelas: String = "",
     val angkatan: String = ""
@@ -101,7 +101,7 @@ data class MahasiswaEvent(
 fun MahasiswaEvent.toMhsModel(): Mahasiswa = Mahasiswa(
     nim = nim,
     nama = nama,
-    jenisKelamin = jenisKelamin,
+    gender = gender,
     alamat = alamat,
     kelas = kelas,
     angkatan = angkatan
