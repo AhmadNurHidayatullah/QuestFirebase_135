@@ -6,6 +6,8 @@ import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.firebase.ui.pages.DestinasiDetail
+import com.example.firebase.ui.pages.DetailView
 import com.example.firebase.ui.pages.HomeScreen
 import com.example.firebase.ui.pages.InsertMhsView
 
@@ -34,5 +36,10 @@ fun PengelolaHalaman (
                 }
             )
         }
+        composable("${DestinasiDetail.route}/{nim}") { backStackEntry ->
+            val nim = backStackEntry.arguments?.getString("nim") ?: ""
+            DetailView(nim = nim, navigateBack = { navController.popBackStack() })
+        }
+
     }
 }
