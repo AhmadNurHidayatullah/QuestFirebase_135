@@ -16,3 +16,11 @@
 <h2>Validasi</h2>
 
 ![image](https://github.com/user-attachments/assets/b7b697af-4b1b-4343-b052-5ae4d7724dcc)
+
+<h2>Database sebelum Tambah Data </h2>
+
+<img width="959" alt="ss gacor" src="https://github.com/user-attachments/assets/24ad74e1-2f48-4b34-9389-66bc4faa5e68" />
+
+<h2> Database setelah tambah Data</h2>
+
+![image](https://github.com/user-attachments/assets/180e8f7d-f10f-4abc-96fc-037e47346255)
